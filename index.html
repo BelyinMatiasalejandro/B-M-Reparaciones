@@ -1,134 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="B &amp; M Reparaciones — reparaciones en general en CABA y alrededores. Tel: 3774 433268." />
-  <title>B &amp; M Reparaciones</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B & M Reparaciones</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
-    :root{
-      --brand:#0b4fb3;
-      --brand-dark:#073a86;
-      --bg:#f5f7fb;
-      --text:#1f2937;
-      --muted:#6b7280;
-      --card:#ffffff;
-      --accent:#f59e0b;
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background: var(--bg);
-      color: var(--text);
-      line-height:1.6;
+    .card {
+      background-color: #ffffff;
+      border-radius: 25px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      max-width: 450px;
+      width: 90%;
     }
-    header{
-      background: linear-gradient(135deg,var(--brand),var(--brand-dark));
-      color:#fff;
-      padding:48px 20px;
-      text-align:center;
+    h1 {
+      color: #ff6f61;
+      margin-bottom: 20px;
+      font-size: 32px;
     }
-    header h1{margin:0;font-size:clamp(28px,4vw,40px);letter-spacing:0.2px}
-    header p{margin:8px 0 0;font-size:clamp(14px,2.2vw,18px);opacity:.95}
-    main{max-width:1080px;margin:0 auto;padding:28px 20px;}
-    h2{color:var(--brand-dark);margin:8px 0 12px;font-size:clamp(22px,3vw,28px)}
-    .lead{color:var(--muted)}
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
-      gap:16px;
+    p {
+      font-size: 18px;
+      color: #333;
+      margin: 15px 0;
     }
-    .card{
-      background:var(--card);
-      border-radius:16px;
-      padding:18px;
-      box-shadow: 0 6px 22px rgba(2,6,23,.06);
-      border:1px solid #e5e7eb;
+    .contact {
+      font-size: 20px;
+      font-weight: bold;
+      color: #28a745;
+      margin-top: 20px;
     }
-    .card h3{margin:4px 0 6px;font-size:18px}
-    .footer{
-      text-align:center;
-      padding:28px 20px 48px;
-      color:#fff;
-      background: linear-gradient(135deg,var(--brand-dark),var(--brand));
-      margin-top:24px;
+    .services {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
     }
-    .cta{
-      display:inline-block;
-      background:var(--accent);
-      color:#1f2937;
-      font-weight:700;
-      padding:10px 16px;
-      border-radius:999px;
-      text-decoration:none;
-      margin-top:8px;
+    .service-item {
+      background-color: #f7f7f7;
+      border-radius: 15px;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      color: #555;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .contact{
-      text-align:center;
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 25px;
+      background-color: #ff6f61;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: background 0.3s;
     }
-    .contact a{color:var(--brand-dark);font-weight:600;text-decoration:none}
-    .whatsapp-fab{
-      position:fixed;right:18px;bottom:18px;
-      background:#25D366;color:#fff;
-      width:56px;height:56px;border-radius:50%;
-      display:flex;align-items:center;justify-content:center;
-      font-size:28px;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.25);
+    .btn:hover {
+      background-color: #e65550;
     }
-    .tag{display:inline-block;background:#eef2ff;color:var(--brand-dark);padding:2px 10px;border-radius:999px;font-size:12px;margin:0 6px 0 0}
+    .service-item i {
+      color: #ff6f61;
+    }
   </style>
 </head>
 <body>
-  <a class="whatsapp-fab" aria-label="WhatsApp" href="https://wa.me/543774433268" target="_blank">✆</a>
-
-  <header>
-    <div class="tag">CABA y alrededores</div>
-    <h1>B &amp; M Reparaciones</h1>
-    <p>Reparaciones en general para hogares y departamentos — rápidos, confiables y con garantía.</p>
-    <a class="cta" href="#contacto">Pedir presupuesto</a>
-  </header>
-
-  <main>
-    <section id="sobre">
-      <h2>Quiénes somos</h2>
-      <p class="lead">
-        En <strong>B &amp; M Reparaciones</strong> realizamos mantenimiento y arreglos integrales.
-        Trabajamos con agenda flexible y atención por WhatsApp.
-      </p>
-    </section>
-
-    <section id="servicios">
-      <h2>Servicios</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Electricidad</h3>
-          <p>Instalaciones, reparación de cortocircuitos, tomas y tableros.</p>
-        </div>
-        <div class="card">
-          <h3>Plomería</h3>
-          <p>Fugas, cambio de griferías, destapaciones simples y cañerías.</p>
-        </div>
-        <div class="card">
-          <h3>Pintura</h3>
-          <p>Pintura interior y exterior. Reparación de humedad y enduido.</p>
-        </div>
-        <div class="card">
-          <h3>Otros trabajos</h3>
-          <p>Mantenimiento general del hogar y del edificio según necesidad.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacto" class="contact">
-      <h2>Contacto</h2>
-      <p><strong>Teléfono / WhatsApp:</strong> <a href="https://wa.me/543774433268" target="_blank">3774 433268</a></p>
-      <p><strong>Email:</strong> <a href="mailto:alejandrombelyin@gmail.com">alejandrombelyin@gmail.com</a></p>
-      <p><strong>Zona:</strong> CABA y alrededores</p>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>© 2025 B &amp; M Reparaciones — Todos los derechos reservados.</p>
-  </footer>
+  <div class="card">
+    <h1>B & M Reparaciones</h1>
+    <p>Realizamos reparaciones en general en CABA y alrededores</p>
+    <div class="services">
+      <div class="service-item"><i class="fas fa-tools"></i> Electricidad</div>
+      <div class="service-item"><i class="fas fa-wrench"></i> Plomería</div>
+      <div class="service-item"><i class="fas fa-paint-roller"></i> Pintura</div>
+      <div class="service-item"><i class="fas fa-couch"></i> Muebles</div>
+    </div>
+    <p class="contact">📞 3774-433268</p>
+    <a class="btn" href="mailto:alejandrombelyin@gmail.com">Enviar correo</a>
+  </div>
 </body>
 </html>
